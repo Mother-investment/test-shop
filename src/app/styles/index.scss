@@ -1,0 +1,23 @@
+@import 'reset';
+@import 'variables/global';
+@import 'themes/dark';
+@import 'themes/light';
+
+.app,
+.app_modal {
+	color: var(--secondary-color);
+	font: var(--font-m);
+	font: 16px;
+}
+
+.app {
+	background: rgb(101, 101, 101);
+	min-height: 100vh;
+}
+
+.contentPage {
+	display: flex;
+	margin: 0 auto;
+	min-height: 100vh;
+	width: 85vw;
+}

@@ -1,0 +1,52 @@
+:root {
+	--font-family-main: consolas, 'times New Roman';
+	--font-size-m: 16px;
+	--font-line-m: 24px;
+	--font-m: var(--font-size-m) / var(--font-line-m) var(--font-family-main);
+	--font-size-l: 24px;
+	--font-line-l: 32px;
+	--font-l: var(--font-size-l) / var(--font-line-l) var(--font-family-main);
+	--font-size-xl: 32px;
+	--font-line-xl: 40px;
+	--font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
+
+	// Размеры
+	--navbar-height: 50px;
+
+	// z - Индексы
+	--z-LuminousContainerPage: 1;
+	--z-selectMenu: 1;
+	--z-dropDownMenu: 2;
+	--z-loginFigure: 3;
+	--z-LuminousContainer: 4;
+	--z-sidebar: 4;
+	--z-loginMenu: 5;
+	--z-navbar: 5;
+	--z-sidebarItem-text: 6;
+	--z-sidebarItem-icon: 7;
+	--z-modal-active: 10;
+	--z-loader: 11;
+	--z-modal: -1;
+
+	// z - Индексы :hover
+	--zh-LuminousContainer: 10;
+
+	// Цвета
+	--primary-color: #fff;
+	--back-dark: #151315;
+	--back-light: #262326;
+	--border-color: #151414;
+	--col-shadow: #0b0c1078;
+	--col-modal-bg: #0b0c109d;
+	--col-container: #0b0c106d;
+	--col-attn: #f44;
+	--luminous-shadow-text-attn:
+		0 0 5px var(--col-attn),
+		0 0 25px var(--col-attn),
+		0 0 50px var(--col-attn),
+		0 0 100px var(--col-attn);
+
+	// Радиус
+	--r-default: 10px;
+	--r-circle: 50%;
+}
