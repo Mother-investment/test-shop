@@ -2,7 +2,7 @@ import { ProductCart } from 'features/Cart/module/types/cartSchema'
 import { Status } from 'shared/const/common'
 
 export interface Order {
-	products: ProductCart[],
+	productsId: string[],
 	name: string,
 	phone: string
 }

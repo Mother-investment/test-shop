@@ -1,10 +1,8 @@
 import { Status } from 'shared/const/common'
 
 export interface Brand {
-	id: number;
-	title: string;
-	sort: string;
-	code: string;
+	id: string
+	title: string
 }
 
 export interface BrandsSchema {

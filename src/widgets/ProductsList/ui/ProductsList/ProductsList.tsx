@@ -9,6 +9,9 @@ import { ProductCard } from '../ProductCard/ProductCard'
 import { getActiveBrands } from 'features/BrandsFilter'
 import { Pagination } from 'features/Pagination'
 import { useParams } from 'react-router-dom'
+import { getOrderOk, orderActions } from 'features/Order'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { cartActions } from 'features/Cart'
 
 interface ProductsListProps {
 	className?: string
@@ -21,12 +24,20 @@ export const ProductsList:React.FC<ProductsListProps> = memo((props) => {
 	const productsData = useSelector(getProductsData)
 	const activeBrands = useSelector(getActiveBrands)
 	const totalPages = useSelector(getProductsTotalPages)
+	const orderOk = useSelector(getOrderOk)
 	const page = useParams<{ number: string }>()
+
+	useInitialEffect(() => {
+		if(orderOk) {
+			dispatch(cartActions.clearCart())
+			dispatch(orderActions.clearOrder())
+		}
+	})
 
 	useEffect(() => {
 		if(activeBrands.length !== 0) {
 			dispatch(fetchProductsData({
-				brand: activeBrands.join('|'),
+				brandId: activeBrands.join('|'),
 				limit: '6',
 				page: page.number
 			}))

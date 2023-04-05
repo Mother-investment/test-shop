@@ -31,8 +31,6 @@ export const OrderForm:React.FC<CartFormProps> = memo((props) => {
 	const dispatch = useAppDispatch()
 	const navigate = useNavigate()
 
-	const [isOpenModal, setIsOpenModal] = useState(false)
-
 	const orderOk = useSelector(getOrderOk)
 	const productsCart = useSelector(getProductsCart)
 
@@ -45,24 +43,13 @@ export const OrderForm:React.FC<CartFormProps> = memo((props) => {
 	const name = watch('name')
 	const phone = watch('phone')
 
-	const onShowModal = useCallback(() => setIsOpenModal(true), [])
-	const onCloseModal = useCallback(() => setIsOpenModal(false), [])
-
-	useEffect(() => {
-		if(orderOk == 'ok') {
-			onShowModal()
-		}
-	},[orderOk])
-
 	const onPostOrder = () => {
 		if(name && phone && productsCart.length !== 0) {
-			dispatch(postOrder({name, phone, products: productsCart}))
+			dispatch(postOrder({name, phone, productsId: productsCart.map(product => product.id)}))
 		}
 	}
 
 	const closeModal = () => {
-		dispatch(orderActions.clearOrder())
-		onCloseModal()
 		navigate(getRouteMain('1'))
 	}
 
@@ -104,8 +91,8 @@ export const OrderForm:React.FC<CartFormProps> = memo((props) => {
 				Отправить
 			</Button>
 
-			{isOpenModal &&
-				<Modal isOpen={isOpenModal} onClose={closeModal}>
+			{orderOk == 'ok' &&
+				<Modal isOpen={orderOk == 'ok'} onClose={closeModal}>
 					<h1>Заказ успешно отправлен!</h1>
 					<Button onClick={closeModal} >Закрыть</Button>
 				</Modal>

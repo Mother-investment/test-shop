@@ -24,6 +24,7 @@ export const ProductCard:React.FC<ProductCardProps> = memo((props) => {
 		<div className={classNames(cls.ProductCard, {}, [className])}>
 			<img src={productData.image} alt='Фото товара' />
 			<h2>{productData.title}</h2>
+			<h3>{productData.brandName}</h3>
 			<div className={cls.price}>
 				<h2>{productData.price} {productData.currency}</h2>
 				<Button onClick={addToCart}>+ Добавить в корзину</Button>

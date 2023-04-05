@@ -18,7 +18,7 @@ export const Checkbox:React.FC<CheckboxProps> = memo((props) => {
 		<div className={classNames(cls.Checkbox, {}, [className])}>
 			<input
 				id={id}
-				type="checkbox"
+				type='checkbox'
 				name={name}
 				onChange={() => handleChange(id)}
 				checked={checked}

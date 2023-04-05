@@ -27,7 +27,7 @@ export const cartSlice = createSlice({
 			if(state.productsCart.find(item => item.id === action.payload.id)!.quantity > 1) {
 				state.productsCart = state.productsCart.map(item => ({
 					...item,
-					quantity: item.id === action.payload.id ? item.quantity + 1 : item.quantity
+					quantity: item.id === action.payload.id ? item.quantity - 1 : item.quantity
 				}))
 				state.totalPrice -= action.payload.price
 			}

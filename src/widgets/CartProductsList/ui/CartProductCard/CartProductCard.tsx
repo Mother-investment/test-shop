@@ -34,6 +34,7 @@ export const CartProductCard:React.FC<CartProductCardProps> = memo((props) => {
 		<div className={classNames(cls.CartProductCard, {}, [className])}>
 			<img src={productData.image} alt='Фото товара' />
 			<h1>{productData.title}</h1>
+			<h2>{productData.brandName}</h2>
 			<div className={cls.counter}>
 				<Button onClick={reduceProduct}>-</Button>
 				<h2>{productData.quantity}</h2>

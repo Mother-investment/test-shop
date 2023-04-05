@@ -1,14 +1,17 @@
 import { Status } from 'shared/const/common'
 
+export type size = 's' | 'm' | 'l' | 'xl'
+
 export interface Product {
-	type: string
-	id: number
-	sku: string
+	id: string
+	size: size[]
 	title: string
 	currency: string
 	price: number
 	image: string
-	brand: number
+	brandName: string
+	brandId: number
+	description: string
 }
 
 export interface ProductsSchema {
@@ -30,7 +33,7 @@ export interface FetchProductsDataParams {
 	page?: string
 	sortBy?: ProductKeys
 	order?: 'asc' | 'desc'
-	brand?: string
+	brandId?: string
 }
 
 export interface ReturnfetchProductsData {

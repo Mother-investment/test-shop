@@ -15,7 +15,7 @@ export const fetchProductsData = createAsyncThunk<ReturnfetchProductsData, Fetch
 					p: params.page,
 					sortBy: params.sortBy,
 					order: params.order,
-					brand: params.brand
+					brandId: params.brandId
 				}
 			})
 

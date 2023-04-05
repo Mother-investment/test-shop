@@ -52,10 +52,10 @@ export const BrandsFilter:React.FC<BrandsFilterProps> = memo((props) => {
 					<Checkbox
 						key={brand.id}
 						title={brand.title}
-						id={`${brand.id}`}
+						id={brand.id}
 						name={''}
 						handleChange={chooseCategory}
-						checked={activeBrands.includes(`${brand.id}`)}
+						checked={activeBrands.includes(brand.id)}
 					/>
 				))}
 			</ul>

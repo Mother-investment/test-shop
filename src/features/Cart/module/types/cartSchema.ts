@@ -1,4 +1,4 @@
-import { Product } from "entities/Products"
+import { Product } from 'entities/Products'
 
 
 export interface ProductCart extends Product {
