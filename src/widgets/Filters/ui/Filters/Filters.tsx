@@ -12,7 +12,7 @@ export const Filters:React.FC<FiltersProps> = memo((props) => {
 	const { className } = props
 
 
-
+	// TODO добавить фильтры и поиск, перенести параметры в url
 	return (
 		<article className={classNames(cls.Filters, {}, [className])}>
 			<Container className={cls.container}>
