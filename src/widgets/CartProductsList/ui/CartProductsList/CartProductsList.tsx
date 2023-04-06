@@ -18,6 +18,15 @@ export const CartProductsList:React.FC<CartProductsListProps> = memo((props) => 
 	if(!productsCart) {
 		return <Loader />
 	}
+
+	if(productsCart.length === 0) {
+		return (
+			<div className={classNames(cls.CartProductsList, {}, [className])}>
+				<h1>Корзина пуста</h1>
+			</div>
+		)
+	}
+
 	return (
 		<div className={classNames(cls.CartProductsList, {}, [className])}>
 			{productsCart.map(product => <CartProductCard key={product.id} productData={product}/>)}

@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ProductsList.module.scss'
-import { memo, useEffect, useMemo } from 'react'
+import { memo, useEffect } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import { fetchProductsData, getProductsData, getProductsTotalPages } from 'entities/Products'
@@ -47,7 +47,7 @@ export const ProductsList:React.FC<ProductsListProps> = memo((props) => {
 				page: page.number
 			}))
 		}
-	},[activeBrands, page.number])
+	},[activeBrands, dispatch, page.number])
 
 	if(!productsData) {
 		return <Loader />
@@ -57,6 +57,7 @@ export const ProductsList:React.FC<ProductsListProps> = memo((props) => {
 		<div className={classNames(cls.ProductsList, {}, [className])}>
 			{productsData.map(product => (
 				<ProductCard
+					className={cls.product}
 					key={product.id}
 					productData={product}
 				/>

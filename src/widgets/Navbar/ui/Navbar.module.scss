@@ -1,0 +1,12 @@
+.Navbar {
+	background-color: var(--bg-color);
+	border-top: 2px solid var(--body-color);
+	border-bottom: 2px solid var(--body-color);
+	width: 100%;
+	height: var(--s-navbar-height);
+	z-index: var(--z-navbar);
+}
+
+.container {
+	height: 100%;
+}

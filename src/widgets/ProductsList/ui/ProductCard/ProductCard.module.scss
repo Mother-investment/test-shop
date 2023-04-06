@@ -1,0 +1,38 @@
+.ProductCard {
+	background-color: var(--bg-color);
+	border-radius: var(--r-default);
+	padding: 22px;
+}
+
+.title {
+	margin-bottom: 5px;
+}
+
+.brand {
+	margin-bottom: 20px;
+}
+
+.addCart {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+
+.price {
+	margin-right: 30px;
+}
+
+.btn {
+
+}
+
+
+@media (max-width: 550px) {
+	.addCart {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	.price {
+		margin-bottom: 10px;
+	}
+}

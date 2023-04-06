@@ -11,7 +11,7 @@ export const CartFormsBlock:React.FC<CartFormsBlockProps> = memo((props) => {
 
 	return (
 		<div className={classNames(cls.CartFormsBlock, {}, [className])}>
-			
+
 		</div>
 	)
 })

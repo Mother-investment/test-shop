@@ -1,0 +1,23 @@
+.ProductsList {
+	width: 60%;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.product + .product {
+	margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+	.ProductsList {
+		width: 80%;
+	}
+}
+
+@media (max-width: 800px) {
+	.ProductsList {
+		width: 100%;
+	}
+}

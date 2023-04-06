@@ -1,0 +1,10 @@
+.container {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ThemeSwitcher {
+	fill: var(--btn-primary-color);
+}

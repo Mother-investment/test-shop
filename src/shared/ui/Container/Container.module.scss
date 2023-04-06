@@ -1,4 +1,60 @@
 .Container {
-	background-color: var(--bg-color);
-	border: 1px solid var(--border-color);
+	display: flex;
+}
+
+.main {
+	margin: 0 auto;
+	width: 85vw;
+}
+
+.ai_normal {
+	align-items: normal;
+}
+
+.ai_center {
+	align-items: center;
+
+}
+
+.ai_flex-start {
+	align-items: flex-start;
+
+}
+
+.ai_flex-end {
+	align-items: flex-end;
+
+}
+
+.jc_normal {
+	justify-content: normal;
+}
+
+.jc_center {
+	justify-content: center;
+
+}
+
+.jc_flex-start {
+	justify-content: flex-start;
+
+}
+
+.jc_flex-end {
+	justify-content: flex-end;
+
+}
+
+.jc_space-between {
+	justify-content: space-between;
+
+}
+
+.d_row {
+	flex-direction: row;
+}
+
+.d_column {
+	flex-direction: column;
+
 }

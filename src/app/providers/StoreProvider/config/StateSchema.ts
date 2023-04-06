@@ -1,4 +1,5 @@
 import { AxiosInstance } from 'axios'
+import { ProductSchema } from 'entities/Product'
 import { ProductsSchema } from 'entities/Products'
 import { BrandsSchema } from 'features/BrandsFilter'
 import { CartSchema } from 'features/Cart'
@@ -10,6 +11,7 @@ export interface StateSchema {
 	brands: BrandsSchema
 	cart: CartSchema
 	order: OrderSchema
+	product: ProductSchema
 }
 
 export interface ThunkExtraArg {

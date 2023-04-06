@@ -5,6 +5,7 @@ import { brandsReducer } from 'features/BrandsFilter'
 import { productsReducer } from 'entities/Products'
 import { cartReducer } from 'features/Cart'
 import { orderReducer } from 'features/Order'
+import { productReducer } from 'entities/Product'
 
 export function createReduxStore(
 	initialState?: StateSchema
@@ -14,7 +15,8 @@ export function createReduxStore(
 		products: productsReducer,
 		brands: brandsReducer,
 		cart: cartReducer,
-		order: orderReducer
+		order: orderReducer,
+		product: productReducer
 	}
 
 	const extraArg: ThunkExtraArg = {

@@ -1,0 +1,28 @@
+.CartPage {
+}
+
+.cartHeader {
+	padding: 20px;
+}
+
+.link {
+	&:hover {
+		color: var(--link-hover-color);
+	}
+}
+
+.content {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+@media (max-width: 800px) {
+	.content {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+}

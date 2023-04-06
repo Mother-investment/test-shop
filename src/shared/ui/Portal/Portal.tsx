@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import { createPortal } from 'react-dom'
+import { Loader } from '../Loader/Loader'
 
 interface PortalProps {
 	children: ReactNode
@@ -7,10 +8,13 @@ interface PortalProps {
 }
 
 export const Portal:React.FC<PortalProps> = (props) => {
-	const {
-		children,
-		element = document.getElementById('root')!
-	} = props
+	const { children } = props
 
-	return createPortal(children, element)
+	const getApp = document.getElementById('app')
+
+	if(!getApp) {
+		return <Loader />
+	}
+
+	return createPortal(children, getApp)
 }

@@ -1,0 +1,45 @@
+.app,
+.app_modal {
+	font-family: var(--font-family-main);
+	color: var(--text-primary-color);
+}
+
+.app {
+	background-color: var(--body-color);
+	min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+	font-weight: var(--fw-semi-bold);
+}
+
+p, li, span {
+	font-weight: var(--fw-regular);
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 15px;
+}
+
+a {
+	font-size: 20px;
+	stroke: var(--text-primary-color);
+
+	&:hover {
+		color: var(--link-hover-color);
+		fill: var(--link-hover-color);
+		stroke: var(--link-hover-color);
+	}
+}

@@ -14,9 +14,9 @@ export const orderSlice = createSlice({
 	initialState,
 	reducers: {
 		clearOrder: (state) => {
-            state.result = ''
+			state.result = ''
 			cartSlice.actions.clearCart()
-        }
+		}
 	},
 	extraReducers: (builder) => {
 		builder

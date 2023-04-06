@@ -1,17 +1,16 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './BrandsFilter.module.scss'
-import { memo, useCallback, useEffect, useMemo, useState } from 'react'
-import { Brand } from '../model/types/brandsSchema'
+import { memo, useCallback, useState } from 'react'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import { getBrandsData } from '../model/selectors/getBrandsData/getBrandsData'
 import { fetchBrandsData } from '../model/services/fetchBrandsData'
 import { Checkbox } from 'shared/ui/Checkbox/Checkbox'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { fetchProductsData } from 'entities/Products'
 import { brandsActions } from '../model/slice/brandsSlice'
 import { Button } from 'shared/ui/Button/Button'
 import { Loader } from 'shared/ui/Loader/Loader'
+import { getActiveBrands } from '../model/selectors/getActiveBrands/getActiveBrands'
 
 interface BrandsFilterProps {
 	className?: string
@@ -22,8 +21,9 @@ export const BrandsFilter:React.FC<BrandsFilterProps> = memo((props) => {
 
 	const dispatch = useAppDispatch()
 	const brandsData = useSelector(getBrandsData)
+	const initialActiveBrands = useSelector(getActiveBrands)
 
-	const [activeBrands, setActiveBrands] = useState<string[]>([])
+	const [activeBrands, setActiveBrands] = useState(initialActiveBrands)
 
 	useInitialEffect(() => {
 		dispatch(fetchBrandsData())
@@ -47,6 +47,7 @@ export const BrandsFilter:React.FC<BrandsFilterProps> = memo((props) => {
 
 	return (
 		<div className={classNames(cls.BrandsFilter, {}, [className])}>
+			<h3 className={cls.title}>Бренды</h3>
 			<ul className={cls.filters}>
 				{brandsData.map(brand => (
 					<Checkbox
@@ -59,7 +60,7 @@ export const BrandsFilter:React.FC<BrandsFilterProps> = memo((props) => {
 					/>
 				))}
 			</ul>
-			<Button onClick={applyFilter}>Применить</Button>
+			<Button theme='background' onClick={applyFilter}>Применить</Button>
 		</div>
 	)
 })

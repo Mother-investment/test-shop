@@ -1,5 +1,5 @@
 import cls from './Loader.module.scss'
-import { classNames, Mods } from 'shared/lib/classNames/classNames'
+import { classNames } from 'shared/lib/classNames/classNames'
 
 export enum LoaderSize {
 	M = 'size_m',

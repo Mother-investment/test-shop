@@ -1,0 +1,14 @@
+.Filters {
+}
+
+.container {
+	position: sticky;
+	top: var(--s-sticky-top);
+}
+
+@media (max-width: 600px) {
+	.container {
+		position: static;
+		align-items: center;
+	}
+}

@@ -17,13 +17,14 @@ export const Checkbox:React.FC<CheckboxProps> = memo((props) => {
 	return (
 		<div className={classNames(cls.Checkbox, {}, [className])}>
 			<input
+				className={cls.input}
 				id={id}
 				type='checkbox'
 				name={name}
 				onChange={() => handleChange(id)}
 				checked={checked}
 			/>
-			<label htmlFor={id}>{title}</label>
+			<label className={cls.label} htmlFor={id}>{title}</label>
 		</div>
 	)
 })

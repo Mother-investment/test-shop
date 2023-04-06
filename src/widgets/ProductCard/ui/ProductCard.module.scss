@@ -1,0 +1,48 @@
+.ProductCard {
+	width: 100%;
+	background-color: var(--bg-color);
+	border-radius: var(--r-default);
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.main {
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 40px;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.title, .brand, .price {
+	text-align: center;
+}
+
+.title {
+	margin-bottom: 5px;
+}
+
+.brand {
+	margin-bottom: 20px;
+}
+
+
+
+@media (max-width: 720px) {
+	.main {
+		align-items: center;
+		flex-direction: column;
+	}
+	.info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.price {
+		margin-bottom: 10px;
+	}
+}

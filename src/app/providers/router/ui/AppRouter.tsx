@@ -1,8 +1,7 @@
 import { memo, Suspense, useCallback } from 'react'
-import { redirect, Route, RouteProps, Routes } from 'react-router-dom'
+import { Route, RouteProps, Routes } from 'react-router-dom'
 import { Loader } from 'shared/ui/Loader/Loader'
 import { routeConfig } from '../config/routeConfig'
-import { getRouteMain } from 'shared/const/router'
 
 const AppRouter: React.FC = () => {
 	const renderWithWrapper = useCallback((route: RouteProps) => {

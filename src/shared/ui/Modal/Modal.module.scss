@@ -10,8 +10,8 @@
 }
 
 .overlay {
+	background-color: var(--col-modal-bg);
 	align-items: center;
-	background: var(--col-modal-bg);
 	display: flex;
 	height: 100%;
 	justify-content: center;
@@ -19,15 +19,12 @@
 }
 
 .content {
-	background: var(--bg-color);
-	border: 1px solid var(--border-color);
-	color: var(--secondary-color);
-	max-width: 60%;
-	min-height: 20%;
-	min-width: 30%;
+	background-color: var(--bg-color);
+	color: var(--text-primary-color);
 	padding: 20px;
 	transform: scale(0.5);
 	transition: 0.3s transform;
+	border-radius: var(--r-default);
 }
 
 .opened {

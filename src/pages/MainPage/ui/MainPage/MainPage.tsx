@@ -3,17 +3,16 @@ import cls from './MainPage.module.scss'
 import { PageWrapper } from 'shared/ui/PageWrapper/PageWrapper'
 import { Filters } from 'widgets/Filters'
 import { ProductsList } from 'widgets/ProductsList'
-import { Cart } from 'features/Cart'
+import { Container } from 'shared/ui/Container/Container'
 
-type MainPageProps = {}
-
-const MainPage: React.FC<MainPageProps> = (props) => {
+const MainPage: React.FC = () => {
 
 	return (
 		<PageWrapper className={classNames(cls.MainPage, {}, [])}>
-			<Cart />
-			<Filters />
-			<ProductsList />
+			<Container className={cls.container} main>
+				<Filters className={cls.filters}/>
+				<ProductsList className={cls.productsList}/>
+			</Container>
 		</PageWrapper>
 	)
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { ThemeProvider } from 'app/providers/ThemeProvider'
 import { createRoot } from 'react-dom/client'
 import { StoreProvider } from 'app/providers/StoreProvider'
 import App from './app/App'
@@ -15,7 +16,9 @@ root.render(
 	<React.StrictMode>
 		<BrowserRouter>
 			<StoreProvider>
-				<App />
+				<ThemeProvider>
+					<App />
+				</ThemeProvider>
 			</StoreProvider>
 		</BrowserRouter>
 	</React.StrictMode>

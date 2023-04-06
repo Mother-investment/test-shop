@@ -73,7 +73,6 @@ export const Modal:React.FC<ModalProps> = (props) => {
 					</div>
 				</div>
 			</Portal>
-
 		</Suspense>
 	)
 }

@@ -1,9 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Filters.module.scss'
-import { memo, useCallback, useEffect } from 'react'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { useSelector } from 'react-redux'
+import { memo } from 'react'
 import { BrandsFilter } from 'features/BrandsFilter'
+import { Container } from 'shared/ui/Container/Container'
 
 interface FiltersProps {
 	className?: string
@@ -12,11 +11,13 @@ interface FiltersProps {
 export const Filters:React.FC<FiltersProps> = memo((props) => {
 	const { className } = props
 
-	
+
 
 	return (
 		<article className={classNames(cls.Filters, {}, [className])}>
-			<BrandsFilter />
+			<Container className={cls.container}>
+				<BrandsFilter />
+			</Container>
 		</article>
 	)
 })

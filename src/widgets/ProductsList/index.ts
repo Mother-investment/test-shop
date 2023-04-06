@@ -1,4 +1,4 @@
 
 
 
-export { ProductsList} from './ui/ProductsList/ProductsList'
+export { ProductsList } from './ui/ProductsList/ProductsList'

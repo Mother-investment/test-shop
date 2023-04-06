@@ -12,34 +12,30 @@ export const cartSlice = createSlice({
 	name: 'cart',
 	initialState,
 	reducers: {
-		addProduct: (state, action: PayloadAction<Product | ProductCart>) => {
+		addProduct: (state: CartSchema, action: PayloadAction<ProductCart | Product>) => {
 			if(state.productsCart.find(item => item.id === action.payload.id)) {
-				state.productsCart = state.productsCart.map(item => ({
-					...item,
-					quantity: item.id === action.payload.id ? item.quantity + 1 : item.quantity
-				}))
+				state.productsCart = state.productsCart.map(item => {
+					return item.id === action.payload.id ? { ...item, quantity: item.quantity + 1 } : item
+				})
 			}else {
-				(state.productsCart).push({...action.payload, quantity: 1})
+				(state.productsCart).push({ ...action.payload, quantity: 1 })
 			}
 			state.totalPrice += action.payload.price
-        },
-		reduceProduct: (state, action: PayloadAction<Product | ProductCart>) => {
-			if(state.productsCart.find(item => item.id === action.payload.id)!.quantity > 1) {
-				state.productsCart = state.productsCart.map(item => ({
-					...item,
-					quantity: item.id === action.payload.id ? item.quantity - 1 : item.quantity
-				}))
-				state.totalPrice -= action.payload.price
-			}
-        },
-		deleteProduct: (state, action: PayloadAction<Product | ProductCart>) => {
-            state.productsCart = state.productsCart.filter(item => item.id != action.payload.id)
-			state.totalPrice -= action.payload.price
-        },
+		},
+		setProductQuantity: (state, action: PayloadAction<ProductCart>) => {
+			state.productsCart = state.productsCart.map(item => {
+				return item.id === action.payload.id ? { ...item, quantity: action.payload.quantity } : item
+			})
+			state.totalPrice = state.productsCart.reduce((acc, item) => acc += item.price * item.quantity, 0)
+		},
+		deleteProduct: (state, action: PayloadAction<ProductCart>) => {
+			state.productsCart = state.productsCart.filter(item => item.id != action.payload.id)
+			state.totalPrice -= (action.payload.price * action.payload.quantity)
+		},
 		clearCart: (state) => {
-            state.productsCart = []
+			state.productsCart = []
 			state.totalPrice = 0
-        }
+		}
 	}
 })
 

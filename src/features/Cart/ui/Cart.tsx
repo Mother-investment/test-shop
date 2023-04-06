@@ -19,11 +19,9 @@ export const Cart:React.FC<CartProps> = memo((props) => {
 	const currency = useSelector(getCurrencyCart)
 
 	return (
-		<div className={classNames(cls.Cart, {}, [className])}>
-			<Link to={getRouteCart()}>
-				<CartIcon />
-				<h2>{Math.ceil(totalPrice * 100) / 100} {currency}</h2>
-			</Link>
-		</div>
+		<Link className={classNames(cls.Cart, {}, [className])} to={getRouteCart()}>
+			<h2>{Math.ceil(totalPrice * 100) / 100} {currency}</h2>
+			<CartIcon className={cls.icon} />
+		</Link>
 	)
 })

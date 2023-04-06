@@ -5,6 +5,7 @@ import { OrderForm } from 'features/Order/ui/OrderForm'
 import { Button } from 'shared/ui/Button/Button'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { cartActions } from 'features/Cart'
+import { Container } from 'shared/ui/Container/Container'
 
 interface CartFormProps {
 	className?: string
@@ -21,8 +22,10 @@ export const CartForm:React.FC<CartFormProps> = memo((props) => {
 
 	return (
 		<div className={classNames(cls.CartForm, {}, [className])}>
-			<OrderForm />
-			<Button onClick={onClearCart}>Очистить корзину</Button>
+			<Container className={cls.container}>
+				<OrderForm />
+				<Button className={cls.btn} onClick={onClearCart} theme='outline' color='attn'>Очистить корзину</Button>
+			</Container>
 		</div>
 	)
 })

@@ -1,0 +1,25 @@
+.CartForm {
+	margin-left: 20px;
+}
+
+.container {
+	background-color: var(--bg-color);
+	padding: 20px;
+	border-radius: var(--r-default);
+	position: sticky;
+	top: var(--s-sticky-top);
+}
+
+.btn {
+	width: 100%;
+}
+
+@media (max-width: 800px) {
+	.CartForm {
+		margin-left: 0;
+		margin: 20px 0;
+	}
+	.container {
+		position: static;
+	}
+}

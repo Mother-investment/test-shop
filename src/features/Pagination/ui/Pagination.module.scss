@@ -1,0 +1,31 @@
+.paginationContainer {
+	margin: 20px 0;
+	background-color: var(--bg-color);
+	border-radius: var(--r-default);
+	width: 100%;
+}
+
+.Pagination {
+	display: flex;
+	padding: 15px;
+	justify-content: center;
+}
+
+.pageItem + .pageItem {
+	margin-left: 5px;
+}
+
+.pageLink {
+	display: block;
+	width: 30px;
+	text-align: center;
+	&:hover {
+		color: var(--link-hover-color);
+	}
+}
+
+.active {
+	color: var(--link-active-color);
+}
+
+.disabled {}

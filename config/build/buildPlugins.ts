@@ -16,7 +16,7 @@ export function buildPlugins({ paths, apiUrl, postApiUrl, isDev }: BuildOptions)
 		new webpack.ProgressPlugin(),
 		new webpack.DefinePlugin({
 			__IS_DEV__: JSON.stringify(isDev),
-            __API__: JSON.stringify(apiUrl),
+			__API__: JSON.stringify(apiUrl),
 			__POSTAPI__: JSON.stringify(postApiUrl)
 		})
 	]
