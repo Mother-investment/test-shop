@@ -92,8 +92,8 @@ export const OrderForm:React.FC<CartFormProps> = memo((props) => {
 				Отправить
 			</Button>
 
-			{orderOk !== 'ok' &&
-				<Modal isOpen={orderOk !== 'ok'} onClose={closeModal}>
+			{orderOk == 'ok' &&
+				<Modal isOpen={orderOk == 'ok'} onClose={closeModal}>
 					<Container alignItems='ai_center'>
 						<AcceptedIcon className={cls.modalIcon} />
 						<h1 className={cls.modalTitle}>Заказ успешно отправлен!</h1>

@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 
 import type { WebpackPluginInstance } from 'webpack'
@@ -30,6 +31,11 @@ export function buildPlugins({ paths, apiUrl, postApiUrl, isDev }: BuildOptions)
 		plugins.push(new MiniCssExtractPlugin({
 			filename: 'css/[name].[contenthash:8].css',
 			chunkFilename: 'css/[name].[contenthash:8].css',
+		}))
+		plugins.push(new CopyPlugin({
+			patterns: [
+				{ from: paths.images, to: paths.buildImages }
+			]
 		}))
 	}
 

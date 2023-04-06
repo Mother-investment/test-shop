@@ -7,11 +7,13 @@ export interface BuildPaths {
     html: string
     src: string
     images: string
+    buildImages: string
 }
 
 export interface BuildEnv {
     mode: BuildMode
     port: number
+    apiUrl: string
 }
 
 export interface BuildOptions {
