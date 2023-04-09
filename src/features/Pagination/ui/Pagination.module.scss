@@ -19,6 +19,7 @@
 	display: block;
 	width: 30px;
 	text-align: center;
+
 	&:hover {
 		color: var(--link-hover-color);
 	}
@@ -27,5 +28,3 @@
 .active {
 	color: var(--link-active-color);
 }
-
-.disabled {}

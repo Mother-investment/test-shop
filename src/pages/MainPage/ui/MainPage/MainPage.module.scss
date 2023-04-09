@@ -1,6 +1,3 @@
-.MainPage {
-}
-
 .container {
 	flex-direction: row;
 }
@@ -9,7 +6,6 @@
 	width: 25%;
 	padding-right: 20px;
 }
-
 
 @media (max-width: 900px) {
 	.filters {
@@ -27,6 +23,7 @@
 	.container {
 		flex-direction: column;
 	}
+
 	.filters {
 		width: 100%;
 		padding-right: 0;

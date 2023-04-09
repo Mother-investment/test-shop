@@ -1,17 +1,16 @@
 .app_dark_theme {
-	--body-color: #131129;
-	--bg-color: #1d1932;
-	--icon-primary-color: #ffffff;
-	--text-primary-color: #ffffff;
-	--text-secondary-color: #68676e;
-	--text-attn-color:#dc3546;
-	--link-active-color: #6f4ff2;
-	--link-hover-color: #5335c9;
-	--btn-text-color: #ffffff;
-	--btn-primary-color: #6f4ff2;
-	--btn-primary-hover-color: #5335c9;
-	--btn-attn-hover-color: #d9182b;
-	--btn-attn-color:#dc3546;
-	--col-modal-bg: #0b0c109d;
-	--disabled-color: #b6b6b660;
+	--body-color: var(--col-dark-navy);
+	--bg-color: var(--col-navy);
+	--icon-primary-color: var(--col-white);
+	--text-primary-color: var(--col-white);
+	--text-secondary-color: var(--col-medium-gray);
+	--text-attn-color: var(--col-dark-red);
+	--link-active-color: var(--col-purple);
+	--link-hover-color: var(--col-dark-purple);
+	--btn-text-color: var(--col-white);
+	--btn-primary-color: var(--col-purple);
+	--btn-primary-hover-color: var(--col-dark-purple);
+	--btn-attn-hover-color: var(--col-red);
+	--btn-attn-color: var(--col-dark-red);
+	--col-modal-bg: var(--col-almost-blac);
 }

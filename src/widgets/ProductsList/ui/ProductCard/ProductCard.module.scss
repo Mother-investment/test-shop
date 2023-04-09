@@ -22,16 +22,13 @@
 	margin-right: 30px;
 }
 
-.btn {
-
-}
-
 
 @media (max-width: 550px) {
 	.addCart {
-		flex-direction: column;
 		align-items: flex-end;
+		flex-direction: column;
 	}
+
 	.price {
 		margin-bottom: 10px;
 	}

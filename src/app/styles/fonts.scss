@@ -1,19 +1,22 @@
 .app,
 .app_modal {
-	font-family: var(--font-family-main);
 	color: var(--text-primary-color);
+	font-family: var(--font-family-main);
 }
 
-.app {
-	background-color: var(--body-color);
-	min-height: 100vh;
-}
-
-h1, h2, h3, h4, h5, h6, a {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
 	font-weight: var(--fw-semi-bold);
 }
 
-p, li, span {
+p,
+li,
+span {
 	font-weight: var(--fw-regular);
 }
 

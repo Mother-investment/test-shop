@@ -1,17 +1,16 @@
 .app_light_theme {
-	--body-color: #f2f2f2;
-	--bg-color: #ffffff;
-	--icon-primary-color: #000000;
-	--text-primary-color: #000000;
-	--text-secondary-color: #68676e;
-	--text-attn-color:#dc3546;
-	--link-active-color: #fd853b;
-	--link-hover-color: #f8670d;
-	--btn-text-color: #ffffff;
-	--btn-primary-color: #fd853b;
-	--btn-primary-hover-color: #f8670d;
-	--btn-attn-hover-color: #d9182b;
-	--btn-attn-color:#dc3546;
-	--col-modal-bg: #0b0c109d;
-	--disabled-color: #9d9fa460;
+	--body-color: var(--col-light-gray);
+	--bg-color: var(--col-white);
+	--icon-primary-color: var(--col-black);
+	--text-primary-color: var(--col-black);
+	--text-secondary-color: var(--col-medium-gray);
+	--text-attn-color: var(--col-dark-red);
+	--link-active-color: var(--col-orange);
+	--link-hover-color: var(--col-dark-orange);
+	--btn-text-color: var(--col-white);
+	--btn-primary-color: var(--col-orange);
+	--btn-primary-hover-color: var(--col-dark-orange);
+	--btn-attn-hover-color: var(--col-red);
+	--btn-attn-color: var(--col-dark-red);
+	--col-modal-bg: var(--col-almost-black);
 }
